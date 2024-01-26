@@ -1,16 +1,16 @@
 #include <iostream>
-
+using namespace std;
 int main() {
     int number;
 
     // Prompt the user to enter a number
-    std::cout << "Enter a number: ";
+    cout << "Enter a number: ";
 
     // Use cin to get input from the user
-    std::cin >> number;
+    cin >> number;
 
     // Display the entered number
-    std::cout << "You entered: " << number << std::endl;
+    cout << "You entered: " << number << endl;
 
     return 0;
 }
