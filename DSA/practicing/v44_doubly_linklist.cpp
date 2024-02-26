@@ -45,6 +45,15 @@ int insertFirst(Node* &head, int n){
 
 */
 
+/*
+int insertEnd(Node* &tail, int n){
+	Node* temp = new Node(n);
+	tail -> next = temp;
+	temp-> prev = tail;
+	tail = temp;
+}
+
+*/
 
 int insertFirst(Node* &head,Node* &tail, int n){
 	if(head == NULL){
@@ -61,15 +70,7 @@ int insertFirst(Node* &head,Node* &tail, int n){
 	}
 }
 
-/*
-int insertEnd(Node* &tail, int n){
-	Node* temp = new Node(n);
-	tail -> next = temp;
-	temp-> prev = tail;
-	tail = temp;
-}
 
-*/
 int insertEnd(Node* &tail,Node* &head, int n){
 	if(tail == NULL){
 		Node* temp = new Node(n);
