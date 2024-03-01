@@ -20,6 +20,8 @@ void insertStart(Node* &head, int n) {
     head = temp;
 }
 
+
+//by using chatGPT i got the most suitable answer and in short code using recursively
 // Function to merge two sorted linked lists
 Node* mergeLinkList(Node* first, Node* second) {
     if (first == NULL) {
