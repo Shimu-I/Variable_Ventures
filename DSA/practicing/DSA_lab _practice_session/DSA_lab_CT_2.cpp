@@ -59,7 +59,7 @@ int newNodeFunction(Node* &head){
 
         
         swap(head -> next ->data, max-> data);
-
+// error
 }
 
 
