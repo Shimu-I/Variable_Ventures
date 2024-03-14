@@ -80,6 +80,42 @@ int insertAtanyPosition(Node* &head, Node* &tail, int data, int pos){
 
 }
 
+int deletation( Node* &head, int pos){
+    if( pos == 1){
+        Node* temp = head ;
+
+        temp -> next -> pre = NULL;
+        head = temp -> next;
+        temp -> next= NULL;
+        delete temp;
+
+       
+       
+    } else {
+    Node* pre = NULL;
+    Node* curr = head;
+
+    int count = 1;
+    while( count < pos){
+        pre = curr;
+        curr = curr -> next;
+        count++;
+    }
+
+    curr -> pre = NULL;
+    pre -> next =  curr -> next;
+    curr -> next = NULL;
+    delete curr;
+}
+
+    }
+
+  
+
+
+
+
+
 int printLinklist(Node* &head){
     Node* temp = head;
     while( temp != NULL){
@@ -116,6 +152,9 @@ cout << "Printing the link list: ";
 
 
 
+deletation(head, 1);
+cout << "Printing the deleted link list: ";
+printLinklist(head);
 
 
 
