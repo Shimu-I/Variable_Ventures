@@ -332,6 +332,44 @@ int printNode(Node* &head){
 cout << endl;
 
 }
+
+int printNodeInReverse(Node* &head){
+	if( head == NULL) return 0;
+
+	printNodeInReverse(head -> next);
+	cout << head -> data << " ";
+
+
+
+}
+
+void deleteSmallest() {
+    if (!head) return;
+
+    Node* prev = nullptr;
+    Node* smallest = head;
+    Node* temp = head->next;
+
+    while (temp) {
+        if (temp->data < smallest->data) {
+            smallest = temp;
+            prev = nullptr;
+        } else {
+            prev = temp;
+        }
+        temp = temp->next;
+    }
+
+    if (!prev) {
+        head = head->next;
+    } else {
+        prev->next = smallest->next;
+    }
+
+    delete smallest;
+}
+
+
 int main(){
 	//creating node object by attocating new memory
 	Node* node1 = new Node(14);
@@ -366,13 +404,11 @@ int main(){
 	deletePos(head, 2);
     printNode(head);
 
-	cout<<endl;
-	cout << "After deletation with value: ";
-	deleteV(head, 14);
-    printNode(head);
 
-	cout << endl;
-	cout << "Head: " << head -> data << endl;
-	cout << "Tail: " << head -> next << endl;
+
+
+
+	cout << "Reverse: ";
+	printNodeInReverse(head);
 
 }
