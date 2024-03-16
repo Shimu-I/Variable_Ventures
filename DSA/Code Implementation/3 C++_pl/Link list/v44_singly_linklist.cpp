@@ -346,7 +346,7 @@ int printNodeInReverse(Node* &head){
 void deleteSmallest() {
     if (!head) return;
 
-    Node* prev = nullptr;
+    Node* pre v = nullptr;
     Node* smallest = head;
     Node* temp = head->next;
 
