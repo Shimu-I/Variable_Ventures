@@ -1,95 +1,140 @@
+//Stack using array
+
 #include <iostream>
 using namespace std;
-#define N 5
 
 class Stack{
     public:
-    int size = N;
+    int sizee;
     int top;
-    int *stack;
+    int* stack;
+    bool pushf;
 
-    Stack(int size){
-            this -> size = size;
-            top = -1;
-            stack = new int[size];
+    Stack(int sizee){
+        this -> sizee = sizee;
+        top  = -1;
+        stack = new int[sizee];
+        pushf = false;
     }
 
+    int push(int item){
+        if( top == sizee -1){
+            cout << "The stack is overflow" << endl;
+        }
+        else{
+            top++;
+            stack[top] = item;
+            pushf = false;
+        }
+        return 1;
+    }
 
-void push(){
-    int n;
-    cout << "Enter the push element: ";
-    cin >> n;
+    void pop(){
+        if( top == -1){
+            cout << "The stack is underflow" << endl;
+        }
+        else{
+            top--;
+        }
+    }
 
-    if( top == size-1){
-        cout << "Overflow." << endl;
+    void peek(){
+        if( top == -1){
+            cout << "The stack is underflow" << endl;
+        }
+        else{
+            cout << "The peek element is: " << stack[top] << endl;
+        }
     }
-    else{
-        top++;
-        stack[top] = n;
-        cout << "The push item is : " << n << endl;
-    }
-}
 
+    int isEmpty(){
+        if( top == -1){
+            return 1;
+        }
+        else return 0;
 
-void pop(){
-    if( top == -1){
-        cout << "Underflow" << endl;
     }
-    else{
-        int item = stack[top];
-        top--;
-        cout << "The pop item is : " << item << endl;
-    }
-}
 
-void peek(){
-    if( top == -1){
-        cout << "Underflow" << endl;
+    void display(){
+        if( top == -1){
+              cout << "The stack is underflow" << endl;
+        }
+        else{
+            for( int i = top ; i >=0 ; i--){
+                cout << stack[i] << " ";
+            }
+        }
+        cout << endl;
     }
-    else{
-        cout << "The peek element is : " << stack[top] << endl;
-    }
-}
- void display(){
-    for( int i = top ; i >=0 ; i--){
-        cout << stack[i] << " ";
-    }
- }
+
 
 };
 
 
-
 int main(){
-    int data;
-    Stack s(N);
+    //Stack s = new Stack(5);
+    Stack s(5);
 
-    while(data != 00){
-        cout << "Enter 1 for push." << endl;
-        cout << "Enter 2 for pop." << endl;
-        cout << "Enter 3 for peek." << endl;
-        cout << "Enter 4 for display." << endl;
+
+
+int option;
+
+
+    do{
+        cout << "Option 1 for push" << endl;
+        cout << "Option 2 for pop" << endl;
+        cout << "Option 3 for peek" << endl;
+        cout << "Option 4 for isEmpty" << endl;
+        cout << "Option 5 for display" << endl;
+        cout << endl;
         cout << endl;
 
-        cout << "Enter data for Stack: ";
-        cin >> data;
+            cout << "Enter your option: ";
 
-        switch(data){
-            case 1 :
-                s.push();
-                break;
-            case 2 :
-                s.pop();
-                break;
-            case 3 :
-                s.peek();
-                break;
-            case 4 :
-                s.display();
-                break;
-            default: cout << "Invalid input" << endl;
+            cin >> option;
+
+        switch(option){
+        case 1:
+            if( !s.pushf){
+                cout << "Input value: ";
+                int item;
+                cin >> item;
+                s.push(item);
+            }
+            else{
+                cout << "Push function already executed" << endl;
+            }
+            break;
+
+        case 2:
+            s.pop();
+            break;
+
+        case 3:
+            s.peek();
+            break;
+
+        case 4:
+            if( s.isEmpty() == 1){
+             cout << "The stack is empty" << endl;
+            }
+            else{
+               cout << "The stack is not empty" << endl;
+            }
+            break;
+
+        case 5:
+            s.display();
+            break;
+
+        default: cout << "Invalid Input" << endl;
+
+
         }
-        cout << endl;
-    }
+
+    }while( option != 0);
+
+cout << endl;
+
 }
 
