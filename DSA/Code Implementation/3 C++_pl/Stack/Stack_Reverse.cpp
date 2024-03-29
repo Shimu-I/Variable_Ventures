@@ -1,148 +1,118 @@
+
+//Stack normal reverse using array
+
 #include <iostream>
 using namespace std;
 
-class Node{
-    public:
-    int data;
-    Node* next;
-
-    Node( int data){
-        this -> data = data;
-        this -> next = NULL;
-    }
-    ~Node(){
-        if( this -> next != NULL){
-            delete next;
-            this -> next = NULL;
-        }
-    }
-};
-
 class Stack{
     public:
-    Node* top;
+    int sizee;
+    int top;
+    char* stack;
+    bool pushf;
 
-    Stack(){
-        top = NULL;
+    Stack(int sizee){
+        this -> sizee = sizee;
+        top  = -1;
+        stack = new char[sizee];
+        pushf = false;
     }
 
-    void push(int item){
-        Node* newNode = new Node(item);
-        newNode -> next = top;
-        top = newNode;
-    }
-
-    int pop(){
-        if( top == NULL){
-            cout << "The stack is underflow" << endl;
-            return -1;
+    int push(char item){
+        if( top == sizee -1){
+            cout << "The stack is overflow" << endl;
         }
         else{
-            Node* temp = top;
-            top = top -> next;
-            int popped_value = temp -> data;
-            temp -> next = NULL;
-            delete temp;
-            return popped_value;
+            top++;
+            stack[top] = item;
+            pushf = false;
         }
+        return 1;
     }
 
-    int peek(){
-        if( top == NULL){
-            cout << "The stack is underflow" << endl;
-            return -1;
+        void display(){
+        if( top == -1){
+              cout << "The stack is underflow" << endl;
         }
         else{
-            return top -> data;
+                cout << "The stack is: ";
+
+            for( int i = 0 ; i <= top ; i++){
+                cout << stack[i] << " ";
+            }
         }
+        cout << endl;
     }
 
-    int isEmpty() {
-        return top == NULL;
-    }
-
-  void insertAtBottom(int item) {
-    if (isEmpty()) {
-        push(item);
-    } else {
-        int temp = pop();
-        insertAtBottom(item);
-
-        // push temp after all items have been inserted at the bottom
-        push(temp);
-    }
-}
-
-
-    void reverse_list() {
-        if (!isEmpty()) {
-            int temp = pop();
-            reverse_list();
-            push(temp);
+    void reverse_display(){
+        if( top == -1){
+              cout << "The stack is underflow" << endl;
         }
+        else{
+                cout << "The reverse stack is: ";
+            for( int i = top ; i >= 0 ; i--){
+                cout << stack[i] << " ";
+            }
+        }
+        cout << endl;
     }
+
+
 };
 
-int main() {
-    Stack s;
-    s.push(1);
-    s.push(2);
-    s.push(3);
-    s.push(4);
 
-    cout << "Original Stack: ";
-    while (!s.isEmpty()) {
-        cout << s.pop() << " ";
-    }
-    cout << endl;
+int main(){
+    //Stack s = new Stack(5);
+    Stack s(5);
 
-    s.push(1);
-    s.push(2);
-    s.push(3);
-    s.push(4);
 
-    s.reverse_list();
 
-    cout << "Reversed Stack: ";
-    while (!s.isEmpty()) {
-        cout << s.pop() << " ";
-    }
-    cout << endl;
+int option;
 
-    return 0;
+
+    do{
+        cout << "Option 1 for push" << endl;
+        cout << "Option 2 for display" << endl;
+        cout << "Option 3 for reverse display" << endl;
+        cout << endl;
+        cout << endl;
+
+            cout << "Enter your option: ";
+
+            cin >> option;
+
+        switch(option){
+        case 1:
+            if( !s.pushf){
+                cout << "Input string: ";
+                string str;
+                cin >> str;
+
+                for(int i = 0 ; i < str.length() ; i++){
+                   s.push(str[i]);
+                }
+
+            }
+            else{
+                cout << "Push function already executed" << endl;
+            }
+            break;
+
+        case 2:
+            s.display();
+            break;
+
+        case 3:
+            s.reverse_display();
+            break;
+
+        default: cout << "Invalid Input" << endl;
+
+
+        }
+
+    }while( option != 0);
+
+cout << endl;
+
 }
-
-
-
-/*
-
-Apologies for the oversight. Let's dry run the provided functions for the input `1 2 3 4`.
-
-1. Initially, the stack is empty.
-
-2. We push elements `1`, `2`, `3`, `4` onto the stack.
-   Stack: `4 3 2 1` (where `1` is at the top and `4` is at the bottom)
-
-3. Now, we start the reversal process:
-   - In the `reverse()` function:
-     - We pop `4` from the stack, the stack becomes `3 2 1`.
-     - We recursively call `reverse()` on the remaining stack.
-   - In the first recursive call:
-     - We pop `3` from the stack, the stack becomes `2 1`.
-     - We recursively call `reverse()` on the remaining stack.
-   - In the second recursive call:
-     - We pop `2` from the stack, the stack becomes `1`.
-     - We recursively call `reverse()` on the remaining stack.
-   - In the third recursive call:
-     - We pop `1` from the stack, the stack becomes empty.
-     - Since the stack is now empty, we exit the recursion.
-
-4. Now, during the reversal process, we start pushing elements back onto the stack:
-   - `insertAtBottom(1)` is called, which simply pushes `1` onto the empty stack.
-   - `insertAtBottom(2)` is called, which pushes `2` onto the stack, making the stack `1 2`.
-   - `insertAtBottom(3)` is called, which pushes `3` onto the stack, making the stack `1 2 3`.
-   - `insertAtBottom(4)` is called, which pushes `4` onto the stack, making the stack `1 2 3 4`.
-
-So, after the reversal process, the stack contains `4 3 2 1`, which is the reverse of the original input `1 2 3 4`.
-
-*/
