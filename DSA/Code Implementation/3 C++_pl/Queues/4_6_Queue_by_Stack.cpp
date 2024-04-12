@@ -55,10 +55,16 @@ int pop2(){
 }
 
 
-void enqueue(int data){
-    push1(data);
-    count++;
-}
+ void enqueue(int data){
+    if( top1 != N-1){
+        push1(data);
+        count++;
+    }
+    else{
+        cout << "The queue has no space" << endl;
+    }
+
+ }
 
 
 void dequeue(){

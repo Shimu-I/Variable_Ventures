@@ -22,7 +22,7 @@ void enqueueAtFront (int data){
 
     else if(front == -1 && rear == -1){
         front = rear = 0;
-        deque[rear] = data;
+        deque[front] = data;
     }
     else if( front == 0){
         front = N -1;
