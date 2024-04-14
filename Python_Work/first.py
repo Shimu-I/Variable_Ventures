@@ -1,14 +1,6 @@
-print('start')
+line = 'Please have a nice day'
 
-def print_this(lang):
-    if lang == 'a' :
-        print('later later')
-    elif lang == 'b' :   
-        print('ka ka ka ka ')
-    else :
-        print('ksdgfegj ')
 
-print_this('dfgd')
-print_this('a')
-print_this('b')
 
+print(line.startswith('Please'))
+print(line.startswith('P'))
