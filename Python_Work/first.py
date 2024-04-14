@@ -1,6 +1,6 @@
-line = 'Please have a nice day'
+fhand = open('mbox.txt')
+inp = fhand.read()
+print(len(inp))
+print(inp[:20])
 
 
-
-print(line.startswith('Please'))
-print(line.startswith('P'))
