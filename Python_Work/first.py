@@ -1,6 +1,9 @@
-fhand = open('mbox.txt')
-inp = fhand.read()
-print(len(inp))
-print(inp[:20])
+purse = dict()
+purse['money'] = 23
+purse['candy'] = 6
+purse['tissues'] = 75
 
-
+print(purse)
+print(purse['candy'])
+purse['candy'] = purse['candy'] + 2
+print(purse)
