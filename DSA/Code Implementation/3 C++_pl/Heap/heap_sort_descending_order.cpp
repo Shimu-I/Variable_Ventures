@@ -34,8 +34,12 @@ void heap_sort(int arr[], int n){
     build_min_heap(arr, n);
 
     for( int i = n-1; i >= 0 ; i--){
-        swap(arr[0], arr[i]);
+        swap(arr[0], arr[i]);  // This moves the smallest (root of the heap) element to the end of the sorted portion of the array.
         min_heapify(arr, i, 0);
+        /*
+The min_heapify function is called on the 0th element, treating the rest of the array (i elements) as a heap. This function ensures that the property of the min heap is maintained after each swap. It does this by moving the largest element to the root of the heap and the smallest element to the leaf, effectively removing the largest element from the heap in each iteration.
+        */
+
     }
 }
  void printArray(int arr[], int n){
