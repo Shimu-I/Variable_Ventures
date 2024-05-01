@@ -60,7 +60,7 @@ class Stack{
               cout << "The stack is underflow" << endl;
         }
         else{
-            for( int i = top ; i >=0 ; i--){
+            for( int i = 0 ; i <= top ; i++){
                 cout << stack[i] << " ";
             }
         }
