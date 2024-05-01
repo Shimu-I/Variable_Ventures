@@ -67,6 +67,19 @@ class Stack{
         cout << endl;
     }
 
+    void ReDisplay(){
+        if( top == -1){
+              cout << "The stack is underflow" << endl;
+        }
+        else{
+                 cout << "Stack list: ";
+            for( int i = 0 ; i <= top ; i++){
+                cout << stack[i] << " ";
+            }
+        }
+        cout << endl;
+    }
+
 
 };
 
@@ -124,7 +137,7 @@ int option;
             break;
 
         case 5:
-            s.display();
+            s.Redisplay();
             break;
 
         default: cout << "Invalid Input" << endl;

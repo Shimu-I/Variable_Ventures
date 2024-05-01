@@ -1,5 +1,7 @@
 //infix to postfix
 
+// important note the Stack need to be char type
+
 #include <iostream>
 using namespace std;
 #define N 50

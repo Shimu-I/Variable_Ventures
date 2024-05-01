@@ -1,4 +1,7 @@
 //infix to prefix
+
+// important note the Stack need to be char type
+
 #include <iostream>
 using namespace std;
 #define N 50
@@ -67,20 +70,6 @@ class Stack{
         }
         cout << endl;
     }
-
-    void ReDisplay(){
-        if( top == -1){
-              cout << "The stack is underflow" << endl;
-        }
-        else{
-                 cout << "Stack list: ";
-            for( int i = 0 ; i <= top ; i++){
-                cout << stack[i] << " ";
-            }
-        }
-        cout << endl;
-    }
-
 
 };
 
