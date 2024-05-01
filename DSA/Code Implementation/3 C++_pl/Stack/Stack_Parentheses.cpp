@@ -1,4 +1,4 @@
-// Stack  palindrome using linklist
+// Stack  parenthese using linklist
 
 #include <iostream>
 # include <cstring>
