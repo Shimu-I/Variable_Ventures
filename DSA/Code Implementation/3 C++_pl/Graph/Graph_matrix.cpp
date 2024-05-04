@@ -27,7 +27,7 @@ void add_Edge(int i , int j){
 
 void toString(){
     for(int i = 0 ; i < vertices ; i++){
-            cout << i << " :";
+            cout << i << " : ";
 
                 for( int j = 0 ; j < vertices ; j++){
                         cout <<  matrix[i][j] << " " ;

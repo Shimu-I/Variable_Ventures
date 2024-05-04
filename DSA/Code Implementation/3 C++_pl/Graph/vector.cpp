@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     vector<int> list1 ;
-
+cout << "INPUT: ";
     for( int i = 0 ; i < 5 ; i++){
             int x;
             cin >> x;
