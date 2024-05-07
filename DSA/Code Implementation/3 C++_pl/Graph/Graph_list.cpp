@@ -24,27 +24,48 @@ void add_Edge(list<int> ad_list[], int v, int u){
     ad_list[u].push_back(v);
 }
 
+
+
+
 int main(){
-    int v = 6;
+    int v, e;
+    cout << "Enter the number of vertices: ";
+    cin >> v;
+
     list<int> ad_list[v];
 
-  add_Edge(ad_list, 0, 4);
-  add_Edge(ad_list, 0, 3);
-  add_Edge(ad_list, 1, 2);
-  add_Edge(ad_list, 1, 4);
-  add_Edge(ad_list, 1, 5);
-  add_Edge(ad_list, 2, 3);
-  add_Edge(ad_list, 2, 5);
-  add_Edge(ad_list, 5, 3);
-  add_Edge(ad_list, 5, 4);
+    cout << "Enter the number of edges: ";
+    cin >> e;
 
+    
+    for(int i = 0; i < e; i++) {
+        int u, v;
+        cout << "Enter edge " << i+1 << ": ";
+        cin >> u >> v;
+        add_Edge(ad_list, u, v);
+    }
 
-Display_Matrix_List(ad_list, 6);
-
-
+    Display_Matrix_List(ad_list, v);
+    return 0;
 }
 
+
+
 /*
+input:
+v= 6
+
+0 4
+0 3
+1 2
+1 4
+1 5
+2 3
+2 5
+5 3
+5 4
+
+
 out put:
 0 --> 4 3
 1 --> 2 4 5

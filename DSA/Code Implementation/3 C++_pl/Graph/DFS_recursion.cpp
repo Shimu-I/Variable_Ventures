@@ -37,12 +37,20 @@ using namespace std;
 int main(){
 
 
-    add_Edge(0, 2);
-    add_Edge(0, 1);
-    add_Edge(1, 3);
-    add_Edge(2, 0);
-    add_Edge(2, 3);
-    add_Edge(2, 4);
+   int n;
+    cout << "Enter the  number of edges";
+    cin >> n;
+
+    for( int i= 0 ; i < n; i++){
+        int u, v;
+          cout << "Enter edge no " << i+1 << ": ";
+             cin >>u >> v;
+             add_Edge(u, v);
+     }
+
+    cout << "DFS traversal: ";
+
+    DFS(0);
 
     cout << "DFS traversal: ";
 
@@ -51,6 +59,15 @@ int main(){
 }
 
 /*
+
+input:
+0 2
+0 1
+1 3
+2 0
+2 3
+2 4
+
 DFS traversal: 0 2 3 4 1
 
 

@@ -25,6 +25,7 @@ void add_Edge(int i , int j){
    matrix[j][i] = true;
 }
 
+
 void toString(){
     for(int i = 0 ; i < vertices ; i++){
             cout << i << " : ";
@@ -39,25 +40,26 @@ void toString(){
 };
 
 
+
 int main(){
-    Graph g(6);
+    int v, e;
+    cout << "Enter the number of vertices: ";
+    cin >> v;
+    Graph g(v);
 
-
-  g.add_Edge(0, 4);
-  g.add_Edge(0, 3);
-  g.add_Edge(1, 2);
-  g.add_Edge(1, 4);
-  g.add_Edge(1, 5);
-  g.add_Edge(2, 3);
-  g.add_Edge(2, 5);
-  g.add_Edge(5, 3);
-  g.add_Edge(5, 4);
-
+    cout << "Enter the number of edges: ";
+    cin >> e;
+    for(int i = 0; i < e; i++) {
+        int u, v;
+        cout << "Enter edge " << i+1 << ": ";
+        cin >> u >> v;
+        g.add_Edge(u, v);
+    }
 
     g.toString();
-
-
+    return 0;
 }
+
 
 
 

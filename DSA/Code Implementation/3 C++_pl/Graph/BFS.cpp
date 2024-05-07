@@ -1,4 +1,4 @@
-//undirected gra
+//undirected graph
 
 
 #include <iostream>
@@ -36,24 +36,38 @@ using namespace std;
     }
 
 
-int main(){
+int main() {
+    int n;
+    cout << "Enter the number of edges: ";
+    cin >> n;
 
-
-    add_Edge(0, 2);
-    add_Edge(0, 1);
-    add_Edge(1, 3);
-    add_Edge(2, 0);
-    add_Edge(2, 3);
-    add_Edge(2, 4);
+    for(int i = 0; i < n; i++) {
+        int u, v;
+        cout << "Enter edge " << i+1 << ": ";
+        cin >> u >> v;
+        add_Edge(u, v);
+    }
 
     cout << "BFS traversal: ";
-
     BFS(0);
 
+    return 0;
 }
 
 
+
+
+
+
 /*
+/*
+input:
+0 2
+0 1
+1 3
+2 0
+2 3
+2 4
 
 output:
 BFS traversal: 0 2 1 3 4
