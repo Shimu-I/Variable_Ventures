@@ -64,7 +64,7 @@ Node* Delete( Node* root, int data){
             }
             // Case no 3: two Childern
             else{
-                Node* temp = FindMin( root -> right);
+                Node* temp = FindMin( root -> right); // Use the in-order successor
                 root -> data = temp -> data;
                 root -> right = Delete( root-> right, temp->  data);
             }
@@ -126,7 +126,7 @@ return 0;
    / \   / \
   20  40 60 80
 
-Let’s say we want to delete the node with data = 30.
+Letï¿½s say we want to delete the node with data = 30.
 
 data = 30 is less than root->data (50), so we move to the left subtree.
 We find data = 30 in the left subtree.
