@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMW car wbsite</title>
+    <style>
+        
+
+        textarea{
+            resize: none;
+        }
+
+        .background-table {
+            width: 1300px;
+            height: 500px;
+            border: 0;
+            cellspacing: 4;
+            cellpadding: 7;
+            margin: 0 auto; /* Centers the table horizontally */
+            position: relative; /* Required for pseudo-element positioning */
+            z-index: 0; /* Ensures table content is above the background */
+        }
+        .background-table::before {
+            content: "";
+            background-image: url('images/car 1.jpg');
+            background-size: cover; /* Ensures the background covers the entire table */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents the background from repeating */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2; /* Adjust this value for desired transparency */
+            z-index: -1; /* Places the pseudo-element behind the table content */
+        }
+    </style>
+    <link rel="icon" href="images/BMW.png">
+</head>
+
+
+<body bgcolor="#0b1116"  style="color:white; font-family:verdana">
+
+    <table 
+    border="0" 
+    width="1300" 
+    height="500" 
+    align="center" 
+    cellspacing="4" 
+    cellpadding="7" 
+    class="background-table" 
+    align="center">
+
+
+    <tr height = "50">
+        <td width = "580">
+            <img src="images/BMW.png" width="50" alt="logo"></td>
+
+        <td align="center" width="200" height="50" >
+            <a href="CAR.html" title="Go to Home">
+            <button class="button" 
+            style="width:100; 
+            height:30; 
+            background-color:#0b1116; 
+            border:0; 
+            color:white">
+            <b>
+            <big>HOME</big>
+            </b>
+            </button>
+            </a>
+        </td>
+
+        <td align="center" width="200" height="50" >
+            <a href="#aboutus" title="Go to About Us">
+            <button class="button" 
+            style="width:100; 
+            height:30; 
+            background-color:#0b1116; 
+            border:0; 
+            color:white">
+            <b>
+            <big>ABOUT</big>
+            </b>
+            </button>
+            </a>
+        </td>
+
+        <td align="center" width="200" height="50" >
+            <a href="#gallery" title="Go to Gallery">
+            <button 
+            class="button" 
+            style="width:100; 
+            height:30; 
+            background-color:#0b1116; 
+            border:0; 
+            color:white">
+            <b>
+            <big>GALLERY</big>
+            </b>
+            </button>
+            </a>
+        </td>
+
+        <td align="center" width="200" height="50" >
+            <a href="#contactus" title="Go to Contact">
+            <button 
+            class="button" 
+            style="width:150; 
+            height:30; 
+            background-color:#0b1116; 
+            border:0; 
+            color:white">
+            <b>
+            <big>CONTACT US</big>
+            </b>
+            </button>
+            </a>
+        </td>
+
+
+<td align="center width=30">
+    <a href="https://www.youtube.com/watch?v=17MB5otcqs4">
+        <img src="images/youtube.png"width="30" height="30">
+    </a>
+</td>
+
+<td align="center width=30">
+    <a href="https://www.facebook.com/BMW/">
+        <img src="images/facebook.png"width="30" height="30">
+    </a>
+</td>
+
+<td align="center width=30">
+    <a href="https://www.instagram.com/bmw/?hl=en">
+        <img src="images/instragram.png"width="30" height="30">
+    </a>
+</td>
+
+<td align="center width=30">
+    <a href="https://x.com/bmwusa">
+        <img src="images/twitter.png"width="30" height="30">
+    </a>
+</td>
+
+    </tr>
+
+
+<tr height="200" width="1300" >
+    <td width="1300" align="center"colspan="9">
+        <p align="center">
+            <big><big>
+                <b>WELCOME</b>
+            </big></big>
+        </p>
+    </td>
+</tr>
+
+<tr>
+    <td width="1300" height="400"></td>
+
+</tr>
+
+</table>
+
+<!--Gallery-->
+
+<div id="gallery">
+    <table border="0" 
+    width="1300" 
+    height="100" 
+    align="center" 
+    bgcolor="#0b1116">
+        <tr>
+            <td>
+                <center>
+                    <p style="width: 250;  
+                         height: 30; 
+                         background-color: #0b1116; 
+                         border: 0; 
+                         color:white">
+                        <big><big>
+                             <b>GALLERY</b>
+                        </big></big>
+                    </p>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+    <table style="border:0; border-collapse: collapse;" 
+    width="1300" 
+    height="300" 
+    align="center" 
+    bgcolor="#101820">
+        <tr>
+            <td 
+            align="center" 
+            width="400" 
+            height="500">
+            <img src="images/car 3.jpeg" width="400" height="500">
+            </td>
+
+            <td 
+            align="center" 
+            width="250" 
+            height="500">
+            <img src="images/car 4.jpeg" width="400" height="500">
+            </td>
+
+            <td 
+            align="center" 
+            width="250" 
+            height="500">
+            <img src="images/car 5.jpeg" width="400" height="500">
+            </td>
+
+            <td 
+            align="center" 
+            width="400" 
+            height="500">
+            <img src="images/car 6.jpeg" width="400" height="500">
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+<!--About Us-->
+<div id="aboutus">
+    <table border="0" 
+    width="1300" 
+    height="100"  
+    align="center" 
+    bgcolor="#0b1116">
+        <tr>
+            <td>
+                <center>
+                    <p 
+                    style="width:250; 
+                    height: 30; 
+                    background-color: #0b1116; 
+                    border:0; 
+                    color:white">
+                    <big><big>
+                        <b>ABOUT US</b>
+                    </big></big>
+                    </p>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+
+
+    <table border="0" 
+    width="1300" 
+    height="500" 
+    align="center" 
+    bgcolor="#0b1116">
+        <tr>
+            <td 
+            rowspan="2" 
+            width="100" 
+            height="500">
+            </td>
+
+            <td width="500" height="500"> 
+            <p style="color:lightgrey">
+                <big><big>What is lorem ipsum?</big></big>
+                <br><br>
+                <big>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Obcaecati provident dolorum fugiat, tempora totam dolore aperiam minus, 
+                    doloremque iusto quis quia necessitatibus. 
+                    Tempore nemo illum aliquam excepturi labore autem ratione!
+                </big>
+            </p>
+
+            </td>
+                <td align="center" 
+                width="700" 
+                height="500">
+                <img src="images/car 2.jpg" width="700" height="500">
+            </td>
+
+        </tr>
+    </table>
+</div>
+
+
+<div id="contactus">
+    <table border="0" 
+    width="1300" 
+    height="100" 
+    align="center" 
+    bgcolor="#0b1116">
+        <tr>
+            <td>
+                <center>
+                    <p style="width: 250; 
+                    height:30; 
+                    background-color: #0b1116; 
+                    border: 0; 
+                    color:white ">
+                        <big><big>
+                                <b>CONTACT US</b>
+                        </big></big>
+                    </p>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+
+
+    <table border="0" 
+    width="1300" 
+    height="300" 
+    align="center" 
+    bgcolor="#101820">
+        <tr>
+            <td width="300"></td>
+            <td>
+                <form>
+                    <p align="left">User name</p>
+                    <input type="text"><br>
+                    <p align="left">Email</p>
+                    <input type="email"><br><br><br>
+
+                    <input type="submit">
+                </form>
+            </td>
+
+            <td  align="center">
+                <textarea  rows="12" cols="50"></textarea>
+            </td>
+
+            <td width="300"></td>
+
+        </tr>
+    </table>
+
+
+    <!--Last Part-->
+    <table border = "0" 
+             width="1300" 
+             height="30" 
+             align="center" 
+             bgcolor="#0b1116">
+            <tr>
+                  <td></td>
+            </tr>
+    </table>
+
+
+    <table border="0" 
+            width="1300" 
+            height="30" 
+            align="center">
+    <tr>
+        <td>
+        <p align="center" > <b> BMW </b> </p>
+        <p align="center" > abc@gmail.com </p>
+        <p align="center" >  Phone number  </p>
+        <p align="center" >  Address  </p>
+
+
+
+        <p align="center" width="40">
+            <a href="https://www.youtube.com/watch?v=17MB5otcqs4" style="margin: 0 10px;" target="_blank">
+
+                <img  src="images/youtube.png" width="30" height="30">
+            </a>
+
+            <a href="https://www.facebook.com/BMW/" style="margin: 0 10px;" target="_blank">
+                <img  src="images/facebook.png" width="30" height="30">
+            </a>
+
+            <a href="https://www.instagram.com/bmw/?hl=en" style="margin: 0 10px;" target="_blank">
+                <img  src="images/instragram.png" width="30" height="30">
+            </a>
+
+            <a href="https://x.com/bmwusa" style="margin: 0 10px;" target="_blank">
+                <img  src="images/twitter.png" width="30" height="30">
+            </a>
+        </p>
+
+        <p align="center" style="color:grey"> 2024 Mask</p>
+        </td>
+
+    </tr>
+    
+    </table>
+
+</div>
+
+</body>
+</html>
