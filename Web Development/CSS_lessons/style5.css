@@ -1,0 +1,16 @@
+h1{
+    text-shadow: 3px 3px 6px hsl(0, 92%, 49%), -5px -5px 6px hsl(234, 67%, 50%)  ;
+}
+
+/*
+
+text-shadow: horizontal_px   vertical_px   blur_px   color_of_shadow  ,  SECOND_SHADOW;
+
+*/
+
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(198, 185, 185);
+    box-shadow: 3px 3px 6px ;
+}

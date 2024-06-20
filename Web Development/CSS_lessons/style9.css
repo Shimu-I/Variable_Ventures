@@ -1,0 +1,23 @@
+#div1{
+    background-color: rgb(61, 144, 218);
+    width: 100px;
+    height: 100px;
+    display: block;
+   
+}
+
+span{
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+    display:inline;
+}
+
+/*
+
+width and hight does not work
+id added display thenit works
+
+means hidden but still thaks its space in the screen
+ visibility: hidden;
+*/

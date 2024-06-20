@@ -1,0 +1,71 @@
+
+/*
+another way  of writing  of box-sizing
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: brown;
+    height: 100vh;
+}
+
+
+
+
+.box1{
+    background-color: azure;
+    border: 2px solid;
+   /* box-sizing: border-box;  */
+    padding: 25px;
+    height: auto;
+    width: 50%;
+    float: left;
+    text-align: center;
+
+    min-height: 50%;
+
+    /*
+    max-width: 25%;
+    min-width: 75%;
+
+    max-height: 25%;
+    min-height: 75%;
+    */
+
+}
+/*
+border and float both work when added box-sizing
+
+*/
+
+.box2{
+
+    border: 2px solid;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 25px;
+    height: auto;
+    width: 50%;
+    float: left;
+}
+
+/*
+hight is set autometicly which is default
+
+*/
+
+
+.box3{
+
+    height: auto;
+    width: 50%;
+    float: left;
+}
+
+/*
+border work wright after deleting  border  property
+
+*/

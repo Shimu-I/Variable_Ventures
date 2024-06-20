@@ -1,0 +1,50 @@
+body{
+    margin:0px;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    font-size: 7em;
+    text-align: center;
+
+    transform: translateX(100px) rotateZ(45deg) scale(.5);
+}
+
+#box1{
+
+    background-color: hsl(236, 100%, 78%);
+
+
+    /*
+    transform: translate(50px, 5px);
+    transform: rotateX(180deg);
+    transform: rotateZ(45deg);
+    transform: scale(2, 2);
+    transform: skew(135deg);
+    
+    */
+    /*
+    alternative way
+        transform: translate(50px, 5px) rotateX(180deg) scale(2, 2);
+    */
+}
+
+#box2{
+    background-color: hsl(109, 94%, 79%);
+}
+
+#box3{
+    background-color: hsl(292, 93%, 79%);
+}
+
+#box4{
+    background-color: hsl(0, 100%, 80%);
+}
+
+
+img{
+    transform: translate(100%) rotateZ(180deg) scaleX(2);
+}
+

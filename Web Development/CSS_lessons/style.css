@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+}
+h1{
+    color: aliceblue;
+}
+p{
+    color: aliceblue;
+}
+
+#p1{
+    color: brown;
+}
+#p2{
+    color: rgb(74, 138, 129);
+}
+#p3{
+    color: rgb(121, 179, 159);
+}
+#p4{
+    color: rgb(115, 236, 236);
+}
+
+.odd{
+    color: rgb(95, 116, 116);
+}
+
+.even{
+    color: blueviolet;
+}

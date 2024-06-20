@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="style13.css">
+</head>
+<body>
+    
+<!--
+    Combinators = explains the relatiionship between  listed selectors
+
+                  = decendant  ((space))
+                > = child
+               ~  = general sibling
+               +  = adjacent  sibling
+-->
+
+<!-- decendant combinator  --> 
+<div id="container1">
+    <p> This is #1</p>
+    <p> This is #2</p>
+
+    <div>
+        <p> This is #12</p>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<!--  child combinator  -->
+<div id="container2">
+    <p> This is #3</p>
+    <p> This is #4</p>
+
+    <div>
+        <p> This is #34</p> <!--cause this is decendant not child-->
+    </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+
+<!-- general combinator   
+                sibling of 1st div-->
+<div id="container3">
+    <p> This is #4</p>
+    <p> This is #5</p>
+                
+        <div>
+            <p> This is #45</p> <!--cause this is decendant not child-->
+        </div>
+    </div>
+
+<p> This is #6</p>
+<p> This is #7</p>
+
+
+<br>
+<br>
+<br>
+
+<!--  adjacent combinator  -->
+<div id="container4">
+    <p> This is #8</p>
+    <p> This is #9</p>
+                
+        <div>
+            <p> This is #89</p> <!--cause this is decendant not child-->
+        </div>
+    </div>
+
+</div>
+
+<div>
+    <p> This is #10</p>
+    <p> This is #11</p>
+</div>
+
+<div>
+<p> This is #12</p>
+<p> This is #13</p>
+
+</body>
+</html>

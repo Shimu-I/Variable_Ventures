@@ -1,0 +1,41 @@
+#container1{
+    border: 2px solid;
+}
+
+
+/* decendant combinator */
+#container1 p{
+    background-color: rgb(165, 165, 227);
+}
+
+
+
+/* child combinator */
+#container2{
+    border: 2px solid;
+}
+
+#container2 > p{
+    background-color: rgb(108, 184, 148);
+}
+
+
+/* general combinator */
+#container3{
+    border: 2px solid;
+}
+
+#container3 ~ p{
+    background-color: rgb(66, 136, 206);
+}
+
+
+/* adjacent combinator */
+#container4{
+    border: 2px solid;
+}
+
+        /* Select the div that is immediately after another div */
+#container4 + div {
+    background-color: rgb(216, 159, 136); /* Changes the background color */
+}

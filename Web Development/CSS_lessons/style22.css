@@ -1,0 +1,50 @@
+
+.container{
+    display: flex;
+    border:10px solid;
+    height: 90vh;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    column-gap: 2em;
+    row-gap: 2em;;
+
+
+    /*
+    main axis
+                    flex-direction: row-reverse ;   flex-direction: row; by default 
+                    justify-content: space-evenly;      justify-content: flex-end; by default 
+    */  
+
+     /*
+     cross axis
+            align-items: baseline;
+     */
+
+     
+}
+
+
+.box{
+    width: 100px;
+    height:100px;
+    font-size: 5em;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#box1{
+    background-color: hsla(29, 60%, 56%, 0.539);
+}
+
+#box2{
+    background-color: hsla(143, 32%, 57%, 0.634);
+}
+
+#box3{
+    background-color: hsla(244, 64%, 55%, 0.655);
+}
+
+#box4{
+    background-color: hsla(0, 48%, 40%, 0.568);
+}
+

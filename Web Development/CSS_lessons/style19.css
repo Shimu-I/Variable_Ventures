@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    margin:0px;
+}
+
+header{
+    background-color: rgb(195, 195, 195);
+    text-align: center;
+    padding: 13px ;
+}
+
+.navbar{
+    background-color: brown;
+    height: 50px;
+}
+
+aside{
+    width:20%;
+    float: left;
+    padding: 10px;
+}
+
+section{
+    width:40%;
+    float: left;
+    padding: 10px;
+}
+
+article{
+    width:40%;
+    float: left;
+    padding: 10px;
+}
+
+footer{
+    display:block;
+    clear:both;
+    background-color: rgb(232, 146, 146);
+    text-align: center;
+    padding: 10px ;
+}
+
+/* Also known as responsive CSS */
+@media screen and (max-width:600px){
+    aside, section, article{
+        width: 100%;
+    }
+}

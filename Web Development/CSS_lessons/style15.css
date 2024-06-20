@@ -1,0 +1,35 @@
+h1::first-letter{
+    font-size: 3em;
+    font-style:italic;
+}
+
+p::first-line{
+    background-color: rgb(212, 186, 237);
+}
+p::selection{
+    color: rgb(52, 205, 88);
+    background-color: rgb(8, 49, 84);
+}
+
+/*
+#fruit li::before{
+    content: "✔";
+}
+    replaced with pseudo element
+*/
+
+#fruit li::marker{
+    content: "✔";
+    color: rgb(197, 52, 120);
+    font-size: 1.6em;
+}
+
+#mango::after{
+    content: "🥭";
+}
+#watermelon::after{
+    content: "🍉";
+}
+#barry::after{
+    content: "🍓";
+}

@@ -1,0 +1,11 @@
+#div1{
+    border: 2px solid;
+    height: 70px;
+    overflow:auto;
+    margin: 50px;
+}
+
+/*
+  overflow: clip;
+    overflow-clip-margin: 20px;
+*/

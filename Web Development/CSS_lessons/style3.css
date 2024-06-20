@@ -1,0 +1,27 @@
+@font-face{
+    src: url(fonts/OpenSans-VariableFont_wdth,wght.ttf);
+    font-family: OpenSans;
+}
+@font-face{
+    src: url(fonts/PlaywriteIS-VariableFont_wght.ttf/);
+    font-family: PlaywriteIS;
+}
+@font-face{
+    src: url(fonts/RobotoCondensed-Italic-VariableFont_wght.ttf);
+    font-family: RobotoCondensed;
+}
+@font-face{
+    src: url(fonts/RobotoSlab-VariableFont_wght.ttf);
+    font-family: RobotoSlab;
+}
+
+h1{
+    font-family: Verdana, arial;
+}
+
+p{
+    font-family: PlaywriteIS;
+    font-size: 14px;
+    font-weight: bolder;
+    font-style: normal;
+}

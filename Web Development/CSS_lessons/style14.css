@@ -1,0 +1,57 @@
+button:hover{
+    background-color: rgb(85, 177, 146);
+    font-size: 1.1em;
+}
+
+button:active{
+    background-color: rgb(233, 155, 83);
+    font-size: 1.1em;
+}
+
+/*
+hover activeis pesudo class
+
+*/
+
+a:link{
+    background-color: hsl(63, 46%, 64%);
+    color: hsl(0, 0%, 100%);
+}
+
+a:hover{
+    color: hsl(355, 69%, 43%);
+    font-size: 1.2em;
+}
+
+a:active{
+    color: rgb(236, 98, 19);
+}
+
+a:visited{
+    color: rgba(128, 18, 95, 0.486);
+}
+
+
+
+li:hover{
+    background-color: rgb(166, 92, 96);
+}
+li:not(:hover){
+    background-color: rgb(138, 140, 140);
+}
+li:nth-child(odd){
+    background-color: rgb(93, 188, 76);
+}
+/*
+    li:nth-child(formula){
+*/
+
+
+#greeting p{
+    background-color: rgb(155, 155, 212);
+    padding: 10px;
+    display: none;
+}
+#greeting:hover p{
+    display: block;
+}
