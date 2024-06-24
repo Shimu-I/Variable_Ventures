@@ -31,16 +31,16 @@
     opacity: .8;
   }
 
-  .header__menue, .header__menue-mobile {
+  .header__menu, .header__menu-mobile {
     padding: 20px;
     
     flex: 1.236;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 64px;;
+    gap: 64px;
 
-    list-style: nome;
+    list-style: none;
   }
 
 .header__menu li {
@@ -61,7 +61,7 @@
 
 }
 
-.header__menue-mobile {
+.header__menu-mobile {
   display: none;
   gap: 20px;
 
